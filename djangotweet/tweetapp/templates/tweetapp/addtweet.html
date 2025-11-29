@@ -1,19 +1,20 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h2>Add Tweet Page</h2>
 <!-- POST = sunucuya bilgi atmak için, GET = sunucudan bilgi almak için -->
 <form action="" method="POST">
   {% csrf_token %}
-  <div class="mb-3">
-    <label for="nickname" class="form-label">Nickname</label>
-    <input type="text" class="form-control" id="nickname" name="nickname">
+  <div class="container" style="width: 75%;">
+    <div class="mb-3">
+      <label for="nickname" class="form-label">Nickname</label>
+      <input type="text" class="form-control" id="nickname" name="nickname">
+    </div>
+    <div class="mb-3">
+      <label for="message" class="form-label">Message</label>
+      <input type="text" class="form-control" id="message" name="message">
+    </div>
+    <button type="submit" class="btn btn-primary">Send Tweet</button>
   </div>
-  <div class="mb-3">
-    <label for="message" class="form-label">Message</label>
-    <input type="text" class="form-control" id="message" name="message">
-  </div>
-  <button type="submit" class="btn btn-primary">Send Tweet</button>
 </form>
 
 {% endblock %}
