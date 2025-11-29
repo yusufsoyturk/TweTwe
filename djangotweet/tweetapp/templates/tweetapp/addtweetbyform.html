@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Add Tweet By Form Page</h2>
+<!-- POST = sunucuya bilgi atmak için, GET = sunucudan bilgi almak için -->
+<form action="" method="POST">
+  {% csrf_token %}
+    <div class="mb-3">
+        {{form.nickname_input.label}}
+        <br>
+        {{form.nickname_input}}
+    </div>
+  <button type="submit" class="btn btn-primary">Send Tweet</button>
+
+</form>
+
+{% endblock %}
