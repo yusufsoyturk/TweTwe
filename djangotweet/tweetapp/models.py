@@ -6,5 +6,5 @@ class Tweet(models.Model):
     message = models.TextField(max_length=500)
 
     def __str__(self):
-        return f"Nickname: {self.name}, message: {self.message}"
+        return f"Nickname: {self.nickname}, message: {self.message}"
     
