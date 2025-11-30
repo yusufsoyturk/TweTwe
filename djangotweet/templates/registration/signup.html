@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+        <form method="POST" action="">
+            <div class="container" style="border: 2px solid rgb(29, 161, 242); padding: 2%;width: 75%;">
+                {% csrf_token %}
+                {% for field in form %}
+                <div class="mb-3">
+                    {{ field.label_tag }}
+                    {{ field }}
+                <br>
+                </div> 
+                {% endfor %}
+                <button type="submit" class="btn btn-primary" value="sign up" >Sign Up</button>
+            </div>
+        </form>
+
+{% endblock %}
